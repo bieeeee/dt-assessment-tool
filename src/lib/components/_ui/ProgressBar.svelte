@@ -9,9 +9,6 @@
     <div class="progress-bar">
       <div class="progress-fill" style="width: {progressPercentage}%"></div>
     </div>
-    <div class="progress-text">
-      Step {currentStep} of {totalSteps}
-    </div>
   </div>
 </main>
 
