@@ -32,4 +32,43 @@ const businessModels = [
   { value: "saas", label: "SaaS", subtitle: "Software as a Service" }
 ];
 
-export { industries, companySizes, revenueRanges, businessModels };
+const techCategories = [
+  {
+    key: "dataManagement",
+    title: "Data Management",
+    icon: "📊",
+    levels: ["Manual/Excel", "Basic Tools", "Advanced Analytics", "AI-Powered"]
+  },
+  {
+    key: "financialSystems",
+    title: "Financial Systems",
+    icon: "💰",
+    levels: ["Spreadsheets", "QuickBooks", "ERP System", "Cloud ERP"]
+  },
+  {
+    key: "salesProcess",
+    title: "Sales Process",
+    icon: "🛒",
+    levels: ["Phone/Email", "Basic CRM", "Sales Automation", "AI-Powered"]
+  },
+  {
+    key: "hrOperations",
+    title: "HR & Operations",
+    icon: "👥",
+    levels: ["Paper/Excel", "HRIS", "Automated Workflows", "AI Assistant"]
+  },
+  {
+    key: "itInfrastructure",
+    title: "IT Infrastructure",
+    icon: "🔒",
+    levels: ["On-Premise", "Hybrid", "Cloud-First", "Cloud-Native"]
+  }
+];
+
+export {
+  industries,
+  companySizes,
+  revenueRanges,
+  businessModels,
+  techCategories
+};

@@ -1,6 +1,7 @@
 <script lang="ts">
   import ProgressBar from "$lib/components/_ui/ProgressBar.svelte";
   import CompanyProfileStep from "$lib/components/assessment/steps/CompanyProfileStep.svelte";
+  import TechAssessmentStep from "$lib/components/assessment/steps/TechAssessmentStep.svelte";
 
   let currentStep = $state(1);
   const totalSteps = 4;
@@ -11,7 +12,7 @@
   {#if currentStep === 1}
     <CompanyProfileStep bind:currentStep />
   {:else if currentStep === 2}
-    <div>2</div>
+    <TechAssessmentStep bind:currentStep />
   {/if}
 </main>
 
