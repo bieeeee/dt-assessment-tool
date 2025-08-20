@@ -2,6 +2,7 @@
   import { ProgressBar } from "$lib/components/_ui";
   import {
     CompanyProfileStep,
+    GoalStep,
     PainPointsStep,
     TechAssessmentStep
   } from "$lib/components/assessment";
@@ -18,6 +19,8 @@
     <TechAssessmentStep bind:currentStep />
   {:else if currentStep === 3}
     <PainPointsStep bind:currentStep />
+  {:else if currentStep === 4}
+    <GoalStep bind:currentStep />
   {/if}
 </main>
 

@@ -41,7 +41,19 @@ function createAssessmentData() {
       update((state) => ({
         ...state,
         [key]: value
-      }))
+      })),
+    toggleValueInArr: (key: string, value: string) =>
+      update((state) => {
+        const prevValue = state[key];
+        const updatedValue = prevValue.includes(value)
+          ? prevValue.filter((p) => p !== value)
+          : [...prevValue, value];
+
+        return {
+          ...state,
+          [key]: updatedValue
+        };
+      })
   };
 }
 

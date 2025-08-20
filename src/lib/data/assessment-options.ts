@@ -78,11 +78,21 @@ const painPointOptions: string[] = [
   "Remote work collaboration issues"
 ];
 
+const goalOptions = [
+  { id: "efficiency", label: "Increase operational efficiency", icon: "📈" },
+  { id: "decisions", label: "Enable data-driven decisions", icon: "💡" },
+  { id: "costs", label: "Reduce operational costs", icon: "💰" },
+  { id: "security", label: "Enhance security/compliance", icon: "🔒" },
+  { id: "remote", label: "Support remote/hybrid work", icon: "🌐" },
+  { id: "customer", label: "Improve customer experience", icon: "📊" }
+];
+
 export {
   industries,
   companySizes,
   revenueRanges,
   businessModels,
   techCategories,
-  painPointOptions
+  painPointOptions,
+  goalOptions
 };

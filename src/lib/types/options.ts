@@ -23,4 +23,10 @@ interface TechCategoriesOption {
   levels: string[];
 }
 
-export type { IndustryOption, Option, TechCategoriesOption };
+interface GoalOption {
+  id: string;
+  label: string;
+  icon: string;
+}
+
+export type { IndustryOption, Option, TechCategoriesOption, GoalOption };
