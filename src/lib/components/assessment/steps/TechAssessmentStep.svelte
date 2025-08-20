@@ -1,8 +1,7 @@
 <script lang="ts">
-  import Rating from "$lib/components/_ui/Rating.svelte";
+  import { StepHeader, Rating } from "$lib/components/_ui";
   import { techCategories } from "$lib/data/assessment-options";
   import { assessmentData } from "$lib/stores/assessment";
-  import StepHeader from "../shared/StepHeader.svelte";
 
   let { currentStep = $bindable() } = $props();
 
@@ -16,7 +15,7 @@
     }));
   }
 
-  const isValid = $derived(
+  const isFormValid = $derived(
     Object.values($assessmentData.techStack).every((v) => v > 0)
   );
 
@@ -60,7 +59,7 @@
     <button type="button" class="btn-secondary" onclick={handleBack}>
       ← Back
     </button>
-    <button type="submit" class="btn-primary" disabled={!isValid}>
+    <button type="submit" class="btn-primary" disabled={!isFormValid}>
       Next: Pain Points →
     </button>
   </div>

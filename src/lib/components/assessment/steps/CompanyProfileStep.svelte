@@ -1,12 +1,11 @@
 <script lang="ts">
-  import StepHeader from "../shared/StepHeader.svelte";
+  import { StepHeader, Card } from "$lib/components/_ui";
   import {
     industries,
     companySizes,
     revenueRanges,
     businessModels
   } from "$lib/data/assessment-options";
-  import Card from "$lib/components/_ui/Card.svelte";
   import { assessmentData } from "$lib/stores/assessment";
 
   let { currentStep = $bindable() } = $props();
