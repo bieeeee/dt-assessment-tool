@@ -13,7 +13,7 @@
 
   function handleNext(event: Event) {
     event.preventDefault();
-    goto("/assessment/results");
+    goto("./assessment/results");
   }
   function handleBack() {
     currentStep--;

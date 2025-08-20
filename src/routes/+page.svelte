@@ -6,7 +6,7 @@
   <h1 class="text-3xl font-bold">
     Assess Your Digital Transformation Readiness
   </h1>
-  <button onclick={() => goto("/assessment")}>Start</button>
+  <button onclick={() => goto("./assessment")}>Start</button>
 </div>
 
 <style lang="postcss">
