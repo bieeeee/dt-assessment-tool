@@ -14,4 +14,50 @@ interface AssessmentData {
   businessGoals: string[];
 }
 
-export { type AssessmentData };
+type Initiative = {
+  name: string;
+  description: string;
+  impact: string;
+  cost: string;
+};
+
+type Phase = {
+  title: string;
+  budget: string;
+  initiatives: Initiative[];
+};
+
+interface AssessmentResult {
+  executiveSummary: string;
+  industryComparison: {
+    percentile: number;
+    benchmark: string;
+  };
+  keyFinding: string[];
+  nextSteps: string[];
+  quickWins: {
+    cost: string;
+    impact: string;
+    initiative: string;
+    timeframe: string;
+  }[];
+  riskAssessment: {
+    low: string[];
+    medium: string[];
+    high: string[];
+  };
+  roadmap: {
+    phase1: Phase;
+    phase2: Phase;
+    phase3: Phase;
+  };
+  roiProjection: {
+    totalInvestment: string;
+    annualSavings: string;
+    paybackMonths: number;
+    threeYearROI: string;
+  };
+  metadata: any;
+}
+
+export type { AssessmentData, AssessmentResult };
