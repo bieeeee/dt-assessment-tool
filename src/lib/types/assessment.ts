@@ -29,11 +29,12 @@ type Phase = {
 
 interface AssessmentResult {
   executiveSummary: string;
+  maturityScore: number;
   industryComparison: {
     percentile: number;
     benchmark: string;
   };
-  keyFinding: string[];
+  keyFindings: string[];
   nextSteps: string[];
   quickWins: {
     cost: string;
