@@ -1,20 +1,5 @@
 import { writable } from "svelte/store";
-
-interface AssessmentData {
-  industry: string;
-  size: string;
-  revenue: string;
-  businessModel: string;
-  techStack: {
-    dataManagement: number;
-    financialSystems: number;
-    salesProcess: number;
-    hrOperations: number;
-    itInfrastructure: number;
-  };
-  painPoints: string[];
-  businessGoals: string[];
-}
+import type { AssessmentData } from "$lib/types/assessment";
 
 function createAssessmentData() {
   const { subscribe, update, set } = writable<AssessmentData>({
