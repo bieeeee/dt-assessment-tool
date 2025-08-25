@@ -1,20 +1,37 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { ScoreSection, KeyFindingsSection } from "$lib/components/assessment";
+  import {
+    ScoreSection,
+    KeyFindingsSection,
+    LoadingState,
+    ErrorState
+  } from "$lib/components/assessment";
   import { generateAssessment } from "$lib/utils/ai-assessment";
   import type { AssessmentResult } from "$lib/types/assessment";
 
+  let loading = $state<boolean>(false);
   let result = $state<AssessmentResult>();
+  let error = $state<string>("");
 
   onMount(async () => {
-    result = await generateAssessment();
-
-    console.log("RESULT :::::::::::", result);
+    try {
+      loading = true;
+      result = await generateAssessment();
+    } catch (err) {
+      error = "Failed to generate assessment. Please try again.";
+      console.error("Assessment generation error:", err);
+    } finally {
+      loading = false;
+    }
   });
 </script>
 
 <main>
-  {#if result}
+  {#if loading}
+    <LoadingState />
+  {:else if error.length > 0}
+    <ErrorState {error} />
+  {:else if result}
     <div class="results-container">
       <!-- Header -->
       <div class="results-header">
