@@ -1,17 +1,8 @@
 <script lang="ts">
   import type { Roadmap } from "$lib/types/assessment";
+  import { formatCurrency } from "$lib/utils/format";
 
   let { roadmap }: { roadmap: Roadmap } = $props();
-
-  function formatCurrency(value: string) {
-    if (typeof value === "string" && value.includes("-")) {
-      const [min, max] = value
-        .split("-")
-        .map((v) => parseInt(v.replace(/\D/g, "")));
-      return `$${min.toLocaleString()} - $${max.toLocaleString()}`;
-    }
-    return value;
-  }
 </script>
 
 <div class="roadmap-timeline">
@@ -27,9 +18,9 @@
             <h4>{initiative.name}</h4>
             <p class="initiative-description">{initiative.description}</p>
             <div class="initiative-details">
-              <span class="initiative-cost"
-                >{formatCurrency(initiative.cost)}</span
-              >
+              <span class="initiative-cost">
+                {formatCurrency(initiative.cost)}
+              </span>
               <span class="initiative-impact">{initiative.impact}</span>
             </div>
           </div>

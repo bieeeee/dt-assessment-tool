@@ -1,13 +1,13 @@
 <script lang="ts">
   let { maturityScore, industryComparison } = $props();
 
-  function getScoreColor(score) {
+  function getScoreColor(score: number) {
     if (score >= 8) return "text-green-600";
     if (score >= 6) return "text-yellow-600";
     return "text-red-600";
   }
 
-  function getScoreBackground(score) {
+  function getScoreBackground(score: number) {
     if (score >= 8) return "bg-green-100";
     if (score >= 6) return "bg-yellow-100";
     return "bg-red-100";
