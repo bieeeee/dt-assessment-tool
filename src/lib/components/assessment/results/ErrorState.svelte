@@ -7,7 +7,7 @@
 <div class="error-state">
   <h2>⚠️ Assessment Generation Failed</h2>
   <p>{error}</p>
-  <button class="btn-primary" onclick={() => goto("/assessment")}>
+  <button class="btn-primary" onclick={() => goto("/dt-accessor/assessment")}>
     Try Again
   </button>
 </div>
@@ -21,5 +21,9 @@
   .error-state h2 {
     color: #dc2626;
     margin-bottom: 1rem;
+  }
+
+  .error-state p {
+    margin-bottom: 2rem;
   }
 </style>

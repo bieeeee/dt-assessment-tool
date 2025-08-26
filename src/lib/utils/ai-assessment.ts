@@ -11,10 +11,9 @@ const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 export async function generateAssessment() {
   const data = get(assessmentData);
 
-  const currentScore = Object.values(data.techStack).reduce(
-    (cur, acc) => acc + cur,
-    0
-  );
+  const currentScore = assessmentData.calculateTechScore(data.techStack);
+
+  console.log("DATA", data, "curr score", currentScore);
 
   try {
     const prompt = buildPrompt(data, currentScore);
@@ -26,9 +25,15 @@ export async function generateAssessment() {
 
     console.log("RESPONSE", response);
 
-    return parseAssessmentResponse(response.text, data, currentScore);
+    const assessment = parseAssessmentResponse(
+      response.text,
+      data,
+      currentScore
+    );
+
+    return assessment;
   } catch (err) {
-    console.log("Assessment generation failed: ", err);
+    throw new Error(`Assessment generation failed: ${err}`);
   }
 }
 
@@ -148,10 +153,12 @@ function buildPrompt(data: AssessmentData, currentScore: number) {
 }
 
 function parseAssessmentResponse(
-  responseText: string,
+  responseText: string | undefined,
   data: AssessmentData,
   currentScore: number
 ) {
+  if (!responseText) throw new Error("Unable to parse response");
+
   try {
     const jsonMatch = responseText.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
@@ -166,8 +173,8 @@ function parseAssessmentResponse(
         }
       };
     }
-  } catch (error) {
-    console.error("Failed to parse AI response:", error);
+  } catch (err) {
+    throw new Error(`Failed to parse AI response: ${err}`);
   }
 
   return null;
