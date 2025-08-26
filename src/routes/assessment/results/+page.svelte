@@ -1,12 +1,16 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
   import {
     ScoreSection,
     KeyFindingsSection,
     LoadingState,
     ErrorState,
     RoadmapSection,
-    ROISection
+    ROISection,
+    QuickWinsSection,
+    RiskSection,
+    NextStepSection
   } from "$lib/components/assessment";
   import { generateAssessment } from "$lib/utils/ai-assessment";
   import type { AssessmentResult } from "$lib/types/assessment";
@@ -71,6 +75,31 @@
         <h2>ROI Projection</h2>
         <ROISection roiProjection={result.roiProjection} />
       </section>
+
+      <!-- Quick Wins -->
+      <section class="quick-wins-section">
+        <h2>Quick Wins</h2>
+        <QuickWinsSection quickWins={result.quickWins} />
+      </section>
+
+      <!-- Risk Assessment -->
+      <section class="risk-section">
+        <h2>Risk Assessment</h2>
+        <RiskSection riskAssessment={result.riskAssessment} />
+      </section>
+
+      <!-- Next Step -->
+      <section class="next-steps-section">
+        <h2>Recommended Next Steps</h2>
+        <NextStepSection nextSteps={result.nextSteps} />
+      </section>
+
+      <!-- Footer Actions -->
+      <div class="results-footer">
+        <button class="btn-secondary" onclick={() => goto("/assessment")}>
+          ← Take Another Assessment
+        </button>
+      </div>
     </div>
   {/if}
 </main>
@@ -117,5 +146,16 @@
     font-size: 1.125rem;
     line-height: 1.6;
     color: #374151;
+  }
+
+  .results-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    gap: 1rem;
   }
 </style>
