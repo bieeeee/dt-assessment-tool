@@ -5,7 +5,8 @@
     KeyFindingsSection,
     LoadingState,
     ErrorState,
-    RoadmapSection
+    RoadmapSection,
+    ROISection
   } from "$lib/components/assessment";
   import { generateAssessment } from "$lib/utils/ai-assessment";
   import type { AssessmentResult } from "$lib/types/assessment";
@@ -63,6 +64,12 @@
       <section class="roadmap-section">
         <h2>Transformation Roadmap</h2>
         <RoadmapSection roadmap={result.roadmap} />
+      </section>
+
+      <!-- ROI Projection -->
+      <section class="roi-section">
+        <h2>ROI Projection</h2>
+        <ROISection roiProjection={result.roiProjection} />
       </section>
     </div>
   {/if}
