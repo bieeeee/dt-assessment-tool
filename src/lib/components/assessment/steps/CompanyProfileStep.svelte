@@ -10,7 +10,7 @@
 
   let { currentStep = $bindable() } = $props();
 
-  function selectCard(category: string, value: string) {
+  function selectCard(category: string, value: any) {
     assessmentData.updateValue(category, value);
   }
 
@@ -51,8 +51,8 @@
     <div class="card-grid">
       {#each companySizes as size}
         <Card
-          isSelected={$assessmentData.size === size.value}
-          onclick={() => selectCard("size", size.value)}
+          isSelected={$assessmentData.size.value === size.value}
+          onclick={() => selectCard("size", size)}
           title={size.label}
           subtitle={size.subtitle}
         />

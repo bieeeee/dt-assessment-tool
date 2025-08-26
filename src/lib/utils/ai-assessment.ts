@@ -50,11 +50,13 @@ function buildPrompt(data: AssessmentData, currentScore: number) {
     .join("\n");
 
   return `
-    You are a senior digital transformation consultant. Analyze this company's digital readiness and provide actionable recommendations.
+    You are a senior digital transformation consultant with deep expertise in ${industry} companies of ${size?.label} size.
+
+    Analyze this company's digital readiness and provide actionable, industry-specific recommendations:
 
     COMPANY PROFILE:
     - Industry: ${industry}
-    - Size: ${size}
+    - Size: ${size?.value} (${size?.label})
     - Revenue: ${revenue}
     - Business Model: ${businessModel}
 
@@ -69,64 +71,104 @@ function buildPrompt(data: AssessmentData, currentScore: number) {
 
     CURRENT DIGITAL MATURITY SCORE: ${currentScore}/10
 
-    Please provide your analysis in this EXACT JSON format:
+    ANALYSIS INSTRUCTIONS:
+    1. Research typical digital maturity levels for ${industry} companies
+    2. Determine realistic budget ranges for ${size.value} (${size?.label}) companies in this industry
+    3. Calculate where this ${currentScore}/10 score ranks within ${industry} industry percentiles
+    4. Provide multiple options for risks (2-4 per category) and quick wins (2-3 items)
+    5. Create detailed, implementable roadmap with realistic timelines and costs
+    6. Ensure all recommendations are specific to ${industry} operational needs
+
+    CRITICAL REQUIREMENTS:
+    - Industry percentile must reflect actual ${industry} digital maturity standards
+    - Budget recommendations must be appropriate for ${size.value} (${size?.label}) ${industry} companies
+    - Include 2-3 initiatives per roadmap phase with realistic cost breakdowns
+    - Provide 2-4 risk items per category (low/medium/high)
+    - Suggest 2-3 quick wins with varying timeframes
+    - All ROI calculations must be conservative yet compelling for this industry/size
+
+    Provide your analysis in this JSON format:
 
     {
-      "executiveSummary": "2-3 sentence overview of current state and biggest opportunity",
+      "executiveSummary": "2-3 sentences about current state and primary transformation opportunity for this ${industry} company",
       "maturityScore": ${currentScore},
       "industryComparison": {
-        "percentile": 45,
-        "benchmark": "Below average for ${industry} companies",
-        "leadersScore": 8.5
+        "percentile": "[Calculate realistic percentile for ${currentScore}/10 score in ${industry} industry]",
+        "benchmark": "[Dynamic description: 'Well below/Below/At/Above average for ${industry} companies']",
+        "leadersScore": "[Research: What score do leading ${industry} companies typically achieve?]"
       },
       "keyFindings": [
-        "Most critical insight about their current state",
-        "Biggest opportunity for improvement",
-        "Main competitive risk if they don't transform"
+        "[Critical insight about current ${industry}-specific operations]",
+        "[Biggest improvement opportunity for ${size?.value} ${industry} company]", 
+        "[Industry-specific competitive risk if no transformation occurs]"
       ],
       "roadmap": {
         "phase1": {
           "title": "Foundation (0-6 months)",
-          "budget": "25000-45000",
+          "budget": "[Research appropriate range for ${size?.value} ${industry} foundation phase]",
           "initiatives": [
             {
-              "name": "Initiative name",
-              "description": "What it involves",
-              "impact": "Expected business impact",
-              "cost": "5000-10000"
+              "name": "[Critical foundation initiative for ${industry}]",
+              "description": "[Detailed implementation approach specific to industry needs]",
+              "impact": "[Measurable business impact]",
+              "cost": "[Realistic cost portion of phase budget]"
+            },
+            {
+              "name": "[Second essential foundation element]", 
+              "description": "[Another critical capability for ${industry} operations]",
+              "impact": "[Expected operational improvement]",
+              "cost": "[Remaining budget allocation]"
             }
           ]
         },
         "phase2": {
-          "title": "Optimization (6-12 months)", 
-          "budget": "40000-75000",
+          "title": "Optimization (6-12 months)",
+          "budget": "[Research appropriate range for ${size?.value} ${industry} optimization phase]",
           "initiatives": [
             {
-              "name": "Initiative name",
-              "description": "What it involves", 
-              "impact": "Expected business impact",
-              "cost": "15000-25000"
+              "name": "[Advanced capability building for ${industry}]",
+              "description": "[Process improvement focused on industry pain points]",
+              "impact": "[Efficiency or compliance impact]",
+              "cost": "[Budget allocation]"
+            },
+            {
+              "name": "[Integration or automation initiative]",
+              "description": "[System integration specific to ${industry} workflows]", 
+              "impact": "[Process efficiency or revenue impact]",
+              "cost": "[Budget allocation]"
+            },
+            {
+              "name": "[Third optimization opportunity]",
+              "description": "[Additional capability relevant to business goals]",
+              "impact": "[Measurable business outcome]", 
+              "cost": "[Budget allocation]"
             }
           ]
         },
         "phase3": {
           "title": "Innovation (12-18 months)",
-          "budget": "50000-100000", 
+          "budget": "[Research appropriate range for ${size?.value} ${industry} innovation phase]",
           "initiatives": [
             {
-              "name": "Initiative name",
-              "description": "What it involves",
-              "impact": "Expected business impact", 
-              "cost": "20000-40000"
+              "name": "[Advanced technology for ${industry}]", 
+              "description": "[Industry-leading technology implementation]",
+              "impact": "[Strategic competitive advantage]",
+              "cost": "[Budget allocation]"
+            },
+            {
+              "name": "[Data analytics or AI specific to industry]",
+              "description": "[Advanced analytics addressing ${industry} challenges]",
+              "impact": "[Predictive insights or operational intelligence]",
+              "cost": "[Budget allocation]"
             }
           ]
         }
       },
       "roiProjection": {
-        "totalInvestment": "115000-220000",
-        "annualSavings": "180000-350000",
-        "paybackMonths": 8,
-        "threeYearROI": "245%"
+        "totalInvestment": "[Sum of realistic phase budgets for ${size?.value} company]",
+        "annualSavings": "[Calculate conservative savings potential for ${size?.value} ${industry} company]",
+        "paybackMonths": "[Realistic payback period based on industry standards: typically 6-24 months]",
+        "threeYearROI": "[Conservative but compelling ROI percentage for this industry/size]"
       },
       "riskAssessment": {
         "low": ["Risk that's manageable"],
@@ -135,20 +177,34 @@ function buildPrompt(data: AssessmentData, currentScore: number) {
       },
       "quickWins": [
         {
-          "initiative": "Easy win initiative",
-          "timeframe": "30-60 days", 
-          "cost": "Low cost",
-          "impact": "Immediate benefit"
-        }
+          "initiative": "[Immediate ${industry}-relevant improvement]",
+          "timeframe": "[2-4 weeks realistic timeframe]",
+          "cost": "[Very low cost - under $1000]", 
+          "impact": "[Quick, visible productivity gain]"
+        },
+        {
+          "initiative": "[Simple tool or process improvement]",
+          "timeframe": "[4-6 weeks implementation]",
+          "cost": "[Low cost - $1000-5000 range]",
+          "impact": "[Measurable operational improvement]"
+        },
       ],
       "nextSteps": [
-        "Immediate action to take",
-        "Key decision to make",
-        "Resource to secure"
+        "[Immediate assessment or stakeholder action needed]",
+        "[Key decision or resource requirement for next 30 days]", 
+        "[Specific preparation needed before Phase 1 implementation]"
       ]
     }
 
-    Focus on practical, industry-specific recommendations. Use realistic budget ranges for ${size} companies. Ensure ROI calculations are conservative but compelling.
+    IMPORTANT: 
+    - Base all percentile calculations on real ${industry} industry digital maturity research
+    - Budget ranges should reflect actual costs for ${size?.value} companies in ${industry}
+    - Every recommendation must address specific ${industry} operational challenges
+    - ROI projections must be researched and realistic for this industry/company size
+    - Avoid generic responses - make everything specific to the company profile provided
+    - Return ONLY valid JSON, no markdown formatting, no code blocks, no additional text.
+
+    Generate detailed, implementable recommendations that this company could realistically execute.
   `;
 }
 

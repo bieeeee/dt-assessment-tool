@@ -1,6 +1,6 @@
 interface AssessmentData {
   industry: string;
-  size: string;
+  size: Record<string, string>;
   revenue: string;
   businessModel: string;
   techStack: {

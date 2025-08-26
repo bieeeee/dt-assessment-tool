@@ -3,7 +3,7 @@ import type { AssessmentData } from "$lib/types/assessment";
 
 const initialData = {
   industry: "",
-  size: "",
+  size: {},
   revenue: "",
   businessModel: "",
   techStack: {
@@ -25,7 +25,7 @@ function createAssessmentData() {
     update,
     set,
     clear: () => set(initialData),
-    updateValue: (key: string, value: string) =>
+    updateValue: (key: string, value: any) =>
       update((state) => ({
         ...state,
         [key]: value

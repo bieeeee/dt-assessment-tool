@@ -1,6 +1,10 @@
 <script lang="ts">
   let { maturityScore, industryComparison } = $props();
 
+  const percent = $derived(
+    Number(industryComparison.percentile.replace("th", ""))
+  );
+
   function getScoreColor(score: number) {
     if (score >= 8) return "text-green-600";
     if (score >= 6) return "text-yellow-600";
@@ -54,17 +58,14 @@
     <div class="percentile-container">
       <div class="percentile-header">
         <span class="percentile-label">Industry Percentile</span>
-        <span class="percentile-value">{industryComparison.percentile}th</span>
+        <span class="percentile-value">{industryComparison.percentile}</span>
       </div>
       <div class="percentile-bar">
         <div
           class="percentile-fill bg-gradient-to-r from-blue-500 to-indigo-600"
-          style="width: {industryComparison.percentile}%"
+          style="width: {percent}%"
         ></div>
-        <div
-          class="percentile-indicator"
-          style="left: {industryComparison.percentile}%"
-        >
+        <div class="percentile-indicator" style="left: {percent}%">
           <div class="indicator-dot"></div>
         </div>
       </div>
