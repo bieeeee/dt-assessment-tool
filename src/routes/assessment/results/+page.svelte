@@ -14,6 +14,7 @@
   } from "$lib/components/assessment";
   import { generateAssessment } from "$lib/utils/ai-assessment";
   import type { AssessmentResult } from "$lib/types/assessment";
+  import { assessmentData } from "$lib/stores/assessment";
 
   let loading = $state<boolean>(false);
   let result = $state<AssessmentResult>();
@@ -96,7 +97,13 @@
 
       <!-- Footer Actions -->
       <div class="results-footer">
-        <button class="btn-secondary" onclick={() => goto("/assessment")}>
+        <button
+          class="btn-secondary"
+          onclick={() => {
+            assessmentData.clear();
+            goto("/dt-accessor/assessment");
+          }}
+        >
           ← Take Another Assessment
         </button>
       </div>
