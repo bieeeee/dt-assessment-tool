@@ -7,3 +7,4 @@ export { default as LoadingState } from "./results/LoadingState.svelte";
 export { default as ErrorState } from "./results/ErrorState.svelte";
 export { default as ScoreSection } from "./results/ScoreSection.svelte";
 export { default as KeyFindingsSection } from "./results/KeyFindingsSection.svelte";
+export { default as RoadmapSection } from "./results/RoadmapSection.svelte";

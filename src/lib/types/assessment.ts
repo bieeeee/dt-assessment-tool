@@ -27,6 +27,12 @@ type Phase = {
   initiatives: Initiative[];
 };
 
+interface Roadmap {
+  phase1: Phase;
+  phase2: Phase;
+  phase3: Phase;
+}
+
 interface AssessmentResult {
   executiveSummary: string;
   maturityScore: number;
@@ -47,11 +53,7 @@ interface AssessmentResult {
     medium: string[];
     high: string[];
   };
-  roadmap: {
-    phase1: Phase;
-    phase2: Phase;
-    phase3: Phase;
-  };
+  roadmap: Roadmap;
   roiProjection: {
     totalInvestment: string;
     annualSavings: string;
@@ -61,4 +63,4 @@ interface AssessmentResult {
   metadata: any;
 }
 
-export type { AssessmentData, AssessmentResult };
+export type { AssessmentData, AssessmentResult, Roadmap };

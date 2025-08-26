@@ -4,7 +4,8 @@
     ScoreSection,
     KeyFindingsSection,
     LoadingState,
-    ErrorState
+    ErrorState,
+    RoadmapSection
   } from "$lib/components/assessment";
   import { generateAssessment } from "$lib/utils/ai-assessment";
   import type { AssessmentResult } from "$lib/types/assessment";
@@ -56,6 +57,12 @@
       <section class="findings-section">
         <h2>Key Findings</h2>
         <KeyFindingsSection keyFindings={result.keyFindings} />
+      </section>
+
+      <!-- Transformation Roadmap -->
+      <section class="roadmap-section">
+        <h2>Transformation Roadmap</h2>
+        <RoadmapSection roadmap={result.roadmap} />
       </section>
     </div>
   {/if}
