@@ -33,10 +33,6 @@
 <style lang="postcss">
   @reference "tailwindcss";
 
-  :global(html) {
-    background-color: theme(colors.slate.50);
-  }
-
   .landing :global(.container) {
     max-width: 1200px;
     margin: 0 auto;
