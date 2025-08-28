@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { StepHeader, Card } from "$lib/components/_ui";
+  import { StepHeader, Card, Select } from "$lib/components/_ui";
   import {
     industries,
     companySizes,
@@ -22,7 +22,7 @@
 
   const isThisStepValid = $derived(
     $assessmentData.industry &&
-      $assessmentData.size &&
+      $assessmentData.size.value &&
       $assessmentData.revenue &&
       $assessmentData.businessModel
   );
@@ -38,12 +38,13 @@
 
   <fieldset class="form-section">
     <legend>Industry</legend>
-    <select bind:value={$assessmentData.industry} required>
-      <option value="">Select your industry</option>
-      {#each industries as industry}
-        <option value={industry.value}>{industry.label}</option>
-      {/each}
-    </select>
+    <Select
+      bind:value={$assessmentData.industry}
+      options={industries}
+      placeholder="Select your industry"
+      required={true}
+      ariaLabel="Select your company's industry"
+    />
   </fieldset>
 
   <fieldset class="form-section">
