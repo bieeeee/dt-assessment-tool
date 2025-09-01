@@ -1,12 +1,7 @@
 import { get } from "svelte/store";
-import { GoogleGenAI } from "@google/genai";
 import { assessmentData } from "$lib/stores/assessment";
 import { techCategories } from "$lib/data/assessment-options";
 import type { AssessmentData } from "$lib/types/assessment";
-
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 export async function generateAssessment() {
   const data = get(assessmentData);
@@ -17,19 +12,24 @@ export async function generateAssessment() {
 
   try {
     const prompt = buildPrompt(data, currentScore);
-
-    const response = await ai.models.generateContent({
-      model: "gemini-1.5-flash",
-      contents: prompt
+    const response = await fetch("/api/gemini", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt })
     });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`HTTP ${response.status}: ${errorText}`);
+    }
+
+    const result = await response.json();
 
     console.log("RESPONSE", response);
 
-    const assessment = parseAssessmentResponse(
-      response.text,
-      data,
-      currentScore
-    );
+    const assessment = parseAssessmentResponse(result.text, data, currentScore);
+
+    console.log("PARSED RESPONSE", assessment);
 
     return assessment;
   } catch (err) {
