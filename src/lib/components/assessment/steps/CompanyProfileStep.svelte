@@ -90,8 +90,14 @@
   </fieldset>
 
   <div class="form-navigation">
-    <button type="submit" class="btn-primary" disabled={!isThisStepValid}>
+    <button type="submit" class="btn-primary next" disabled={!isThisStepValid}>
       Next: Current Technology →
     </button>
   </div>
 </form>
+
+<style lang="postcss">
+  .next {
+    margin-left: auto;
+  }
+</style>

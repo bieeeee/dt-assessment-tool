@@ -24,11 +24,17 @@
   {/if}
 </main>
 
-<style>
+<style lang="postcss">
   .assessment-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     min-height: 100vh;
+  }
+
+  .assessment-container :global(.form-navigation) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 </style>

@@ -31,10 +31,4 @@
     background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
     transition: width 0.3s ease;
   }
-
-  .progress-text {
-    text-align: center;
-    color: #6b7280;
-    font-size: 0.875rem;
-  }
 </style>
