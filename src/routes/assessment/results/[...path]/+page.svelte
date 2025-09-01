@@ -15,20 +15,56 @@
   import { generateAssessment } from "$lib/utils/ai-assessment";
   import type { AssessmentResult } from "$lib/types/assessment";
   import { assessmentData } from "$lib/stores/assessment";
+  import { page } from "$app/state";
+  import {
+    manufacturingDemoData,
+    technologyDemoData,
+    professionalServicesDemoData
+  } from "$lib/data/demo";
 
   let loading = $state<boolean>(false);
   let result = $state<AssessmentResult>();
   let error = $state<string>("");
 
+  function getDemoData(type: string) {
+    const demoData: Record<string, any> = {
+      manufacturing: manufacturingDemoData,
+      technology: technologyDemoData,
+      professional: professionalServicesDemoData
+    };
+
+    return demoData[type] || null;
+  }
+
   onMount(async () => {
-    try {
-      loading = true;
-      result = await generateAssessment();
-    } catch (err) {
-      error = "Failed to generate assessment. Please try again.";
-      console.error("Assessment generation error:", err);
-    } finally {
+    console.log("SLUGS", page.params);
+    const slugs = page.params.path?.split("/") || [];
+
+    if (slugs[0] === "demo") {
+      const demoType = slugs[1];
+      result = getDemoData(demoType);
       loading = false;
+
+      if (!result) {
+        console.error("There's no data for demo");
+        goto("/");
+      }
+    } else {
+      if (!$assessmentData.industry) {
+        console.error("There's no assessment data");
+        goto("/assessment");
+        return;
+      }
+
+      try {
+        loading = true;
+        result = await generateAssessment();
+      } catch (err) {
+        error = "Failed to generate assessment. Please try again.";
+        console.error("Assessment generation error:", err);
+      } finally {
+        loading = false;
+      }
     }
   });
 </script>
@@ -101,7 +137,7 @@
           class="btn-secondary"
           onclick={() => {
             assessmentData.clear();
-            goto("/dt-accessor/assessment");
+            goto("/assessment");
           }}
         >
           ← Take Another Assessment
@@ -160,7 +196,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
-    padding: 2rem;
     background-color: #f9fafb;
     border-radius: 12px;
     gap: 1rem;

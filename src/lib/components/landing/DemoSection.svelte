@@ -26,22 +26,25 @@
   ];
 
   function tryDemo(example: string) {
-    goto(`./assessment/demo/${example.toLowerCase().replace(/\s+/g, "-")}`);
+    goto(
+      `./assessment/results/demo/${example.toLowerCase().replace(/(\s\w+)/g, "")}`
+    );
   }
 </script>
 
 <section id="demos" class="demos-section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Try Interactive Examples</h2>
+      <h2 class="section-title">View Sample Results</h2>
       <p class="section-subtitle">
-        See how the assessment works with these sample company profiles
+        Review comprehensive transformation roadmaps across various business
+        scenarios
       </p>
     </div>
 
     <div class="demo-grid">
       {#each demoExamples as example}
-        <div class="demo-card">
+        <button class="demo-card" onclick={() => tryDemo(example.title)}>
           <div class="demo-icon">{example.icon}</div>
           <h3 class="demo-title">{example.title}</h3>
           <p class="demo-subtitle">{example.subtitle}</p>
@@ -57,10 +60,8 @@
             </div>
           </div>
 
-          <button class="demo-btn" onclick={() => tryDemo(example.title)}>
-            View Results →
-          </button>
-        </div>
+          <div class="demo-btn">View Results →</div>
+        </button>
       {/each}
     </div>
   </div>
