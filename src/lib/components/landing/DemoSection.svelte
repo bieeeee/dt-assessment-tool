@@ -5,22 +5,22 @@
     {
       title: "Manufacturing Company",
       subtitle: "200 employees, Traditional Operations",
-      maturityScore: 4.2,
-      savings: "$285K annually",
+      aiReadinessScore: 4.2,
+      potentialSavings: "$285K annually",
       icon: "🏭"
     },
     {
       title: "Technology Startup",
       subtitle: "50 employees, SaaS Platform",
-      maturityScore: 6.8,
-      savings: "$150K annually",
+      aiReadinessScore: 6.8,
+      potentialSavings: "$150K annually",
       icon: "💻"
     },
     {
       title: "Professional Services",
       subtitle: "100 employees, Consulting Firm",
-      maturityScore: 5.1,
-      savings: "$220K annually",
+      aiReadinessScore: 5.1,
+      potentialSavings: "$220K annually",
       icon: "🏢"
     }
   ];
@@ -52,11 +52,11 @@
           <div class="demo-metrics">
             <div class="metric">
               <span class="metric-label">Maturity Score</span>
-              <span class="metric-value">{example.maturityScore}/10</span>
+              <span class="metric-value">{example.aiReadinessScore}/10</span>
             </div>
             <div class="metric">
               <span class="metric-label">Potential Savings</span>
-              <span class="metric-value">{example.savings}</span>
+              <span class="metric-value">{example.potentialSavings}</span>
             </div>
           </div>
 

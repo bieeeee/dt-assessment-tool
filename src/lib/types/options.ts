@@ -11,10 +11,10 @@ interface Option {
 
 type TechStackKey =
   | "dataManagement"
-  | "financialSystems"
-  | "salesProcess"
-  | "hrOperations"
-  | "itInfrastructure";
+  | "aiAdoption"
+  | "processAutomation"
+  | "teamReadiness"
+  | "infrastructureReadiness";
 
 interface TechCategoriesOption {
   key: TechStackKey;

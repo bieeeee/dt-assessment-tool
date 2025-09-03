@@ -7,13 +7,14 @@
     <div class="cta-content">
       <h2 class="cta-title">Ready to Transform Your Business?</h2>
       <p class="cta-subtitle">
-        Get your personalized digital transformation roadmap in just 15 minutes
+        Get your personalized AI transformation roadmap in just 15 minutes
       </p>
       <button class="btn-primary large" onclick={startAssessment}>
         Start Your Assessment Now
         <span class="btn-icon">🚀</span>
       </button>
       <p class="cta-note">No registration required • Free assessment</p>
+      <p class="cta-note">Powered by gemini-1.5-flash</p>
     </div>
   </div>
 </section>

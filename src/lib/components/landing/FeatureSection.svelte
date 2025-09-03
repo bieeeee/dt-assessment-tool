@@ -1,27 +1,28 @@
 <script lang="ts">
   const features = [
     {
-      icon: "🔍",
-      title: "Industry-Specific Analysis",
+      icon: "🤖",
+      title: "AI Readiness Analysis",
       description:
-        "Tailored recommendations based on your sector and company size"
+        "Comprehensive assessment of your current AI capabilities and team readiness"
     },
     {
-      icon: "📊",
-      title: "Digital Maturity Scoring",
+      icon: "🎯",
+      title: "Industry-Specific AI Use Cases",
       description:
-        "Comprehensive assessment of your current technology capabilities"
+        "Tailored AI implementation recommendations based on your sector and business model"
     },
     {
       icon: "🚀",
-      title: "Actionable Roadmap",
+      title: "3-Phase AI Roadmap",
       description:
-        "3-phase transformation plan with realistic timelines and budgets"
+        "Strategic implementation plan from AI foundations to advanced automation"
     },
     {
-      icon: "💰",
-      title: "ROI Projections",
-      description: "Conservative estimates of cost savings and business impact"
+      icon: "📈",
+      title: "AI ROI Projections",
+      description:
+        "Realistic estimates of productivity gains and cost savings through AI adoption"
     }
   ];
 </script>
@@ -29,9 +30,10 @@
 <section class="features-section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Comprehensive Digital Assessment</h2>
+      <h2 class="section-title">Comprehensive AI Readiness Assessment</h2>
       <p class="section-subtitle">
-        Everything you need to understand and plan your digital transformation
+        Everything you need to understand and plan your AI transformation
+        journey
       </p>
     </div>
 

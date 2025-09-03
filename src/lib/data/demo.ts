@@ -1,88 +1,97 @@
 export const manufacturingDemoData = {
   executiveSummary:
-    "This 200-employee manufacturing company exhibits moderate digital maturity (4.2/10) with significant opportunities in process automation and data integration. The primary transformation opportunity lies in modernizing production planning, implementing predictive maintenance, and establishing real-time visibility across manufacturing operations.",
+    "This 200-employee manufacturing company exhibits moderate AI readiness (4.2/10) with significant opportunities in predictive maintenance and automated quality control. The primary AI transformation opportunity lies in implementing IoT sensors with machine learning for equipment monitoring, automated production planning, and real-time quality assurance systems.",
   maturityScore: 4.2,
   industryComparison: {
     percentile: "35th",
-    benchmark: "Below average for manufacturing companies",
+    benchmark: "Below average for manufacturing companies in AI adoption",
     leadersScore: 8.3
   },
+  aiReadiness: {
+    currentState: "Basic",
+    opportunities: [
+      "Predictive maintenance AI to reduce equipment downtime by 40%",
+      "Computer vision for automated quality inspection and defect detection"
+    ],
+    competitiveGap:
+      "Without AI adoption, the company risks losing contracts to competitors using AI-driven predictive maintenance and real-time quality monitoring, potentially losing 15-20% market share within 2 years."
+  },
   keyFindings: [
-    "Manual production planning and paper-based work orders create bottlenecks and increase error rates, impacting on-time delivery performance.",
-    "Implementing IoT sensors and manufacturing execution systems (MES) offers the greatest potential for efficiency gains and quality improvements.",
-    "Without digital transformation, the company risks losing contracts to more agile competitors who can offer real-time tracking and faster response times."
+    "Manual equipment monitoring and reactive maintenance create unnecessary downtime, costing an estimated $180K annually in lost production time.",
+    "Implementing AI-powered predictive maintenance and computer vision quality control offers the greatest potential for cost reduction and efficiency gains.",
+    "Without AI transformation, the company faces competitive disadvantage against AI-adopting manufacturers who can offer 99.5% uptime guarantees and real-time quality metrics to customers."
   ],
   roadmap: {
     phase1: {
-      title: "Foundation (0-6 months)",
+      title: "AI Foundation (0-6 months)",
       budget: "$45,000-75,000",
       initiatives: [
         {
-          name: "Manufacturing Execution System (MES) Implementation",
+          name: "IoT Sensor Network Deployment",
           description:
-            "Deploy a cloud-based MES to digitize work orders, track production progress, and eliminate paper-based processes. Focus on core production lines first.",
+            "Install smart sensors on critical machinery to collect temperature, vibration, and performance data. Establish data pipeline for AI model training and real-time monitoring.",
           impact:
-            "30% reduction in production planning time and 15% improvement in on-time delivery",
+            "Foundation for predictive analytics and 25% reduction in data collection time",
           cost: "$25,000-40,000"
         },
         {
-          name: "Inventory Management System Upgrade",
+          name: "Basic AI Analytics Platform",
           description:
-            "Implement barcode scanning and real-time inventory tracking to reduce stockouts and optimize raw material ordering.",
+            "Implement cloud-based AI analytics platform with pre-built manufacturing models for equipment monitoring and production optimization.",
           impact:
-            "20% reduction in inventory carrying costs and improved material availability",
+            "Real-time visibility into equipment health and 15% improvement in maintenance scheduling efficiency",
           cost: "$20,000-35,000"
         }
       ]
     },
     phase2: {
-      title: "Optimization (6-12 months)",
+      title: "AI Integration (6-12 months)",
       budget: "$75,000-150,000",
       initiatives: [
         {
-          name: "IoT Sensor Network for Equipment Monitoring",
+          name: "Predictive Maintenance AI System",
           description:
-            "Install sensors on critical machinery to monitor performance, track downtime, and enable predictive maintenance scheduling.",
+            "Deploy machine learning models to predict equipment failures 2-4 weeks in advance. Integrate with maintenance scheduling and inventory management systems.",
           impact:
-            "25% reduction in unplanned downtime and 15% improvement in overall equipment effectiveness",
+            "40% reduction in unplanned downtime and 30% decrease in maintenance costs",
           cost: "$35,000-70,000"
         },
         {
-          name: "Production Analytics Dashboard",
+          name: "Computer Vision Quality Control",
           description:
-            "Develop real-time dashboards showing key production metrics, quality indicators, and performance against targets.",
+            "Implement AI-powered visual inspection systems using computer vision to detect defects in real-time during production processes.",
           impact:
-            "Improved decision-making speed and 10% increase in production efficiency",
-          cost: "$25,000-45,000"
+            "60% reduction in quality defects and 50% faster defect detection",
+          cost: "$25,000-50,000"
         },
         {
-          name: "Quality Management System Integration",
+          name: "AI-Powered Production Optimization",
           description:
-            "Integrate quality control data with production systems to enable real-time quality monitoring and automated alerts.",
+            "Use machine learning algorithms to optimize production schedules, resource allocation, and workflow efficiency based on historical and real-time data.",
           impact:
-            "40% reduction in quality defects and faster issue resolution",
-          cost: "$15,000-35,000"
+            "20% increase in overall equipment effectiveness (OEE) and improved resource utilization",
+          cost: "$15,000-30,000"
         }
       ]
     },
     phase3: {
-      title: "Innovation (12-18 months)",
+      title: "AI Innovation (12-18 months)",
       budget: "$100,000-200,000",
       initiatives: [
         {
-          name: "Predictive Maintenance Platform",
+          name: "Advanced AI Manufacturing Intelligence",
           description:
-            "Implement AI-powered predictive maintenance using machine learning to analyze sensor data and predict equipment failures.",
+            "Implement advanced AI models for supply chain optimization, demand forecasting, and autonomous quality adjustments using reinforcement learning.",
           impact:
-            "50% reduction in maintenance costs and 30% improvement in equipment uptime",
+            "25% improvement in supply chain efficiency and autonomous quality control adjustments",
           cost: "$60,000-120,000"
         },
         {
-          name: "Supply Chain Visibility Platform",
+          name: "AI-Driven Customer Intelligence Platform",
           description:
-            "Connect with key suppliers and customers through digital platforms to enable end-to-end supply chain visibility and collaboration.",
+            "Deploy AI systems to analyze customer usage patterns, predict maintenance needs for delivered products, and enable proactive customer service.",
           impact:
-            "20% improvement in supply chain efficiency and enhanced customer satisfaction",
+            "30% increase in customer satisfaction and new revenue streams through predictive services",
           cost: "$40,000-80,000"
         }
       ]
@@ -96,45 +105,49 @@ export const manufacturingDemoData = {
   },
   riskAssessment: {
     low: [
-      "Vendor compatibility with existing manufacturing equipment",
-      "Training requirements for production staff on new systems"
+      "AI model accuracy requiring fine-tuning period",
+      "Staff training requirements for new AI tools"
     ],
     medium: [
-      "Integration complexity with legacy ERP systems",
-      "Production disruption during system implementations",
-      "Change management resistance from floor supervisors"
+      "Data quality issues affecting AI model performance",
+      "Integration complexity with existing manufacturing systems",
+      "Change management resistance from floor operators"
     ],
     high: [
-      "Cybersecurity vulnerabilities from increased connectivity",
-      "Dependence on reliable internet connectivity for cloud-based systems"
+      "AI competitive disadvantage if competitors implement first",
+      "Cybersecurity vulnerabilities from connected IoT sensors"
     ]
   },
   quickWins: [
     {
-      initiative: "Implement digital work order system for one production line",
+      initiative:
+        "Deploy ChatGPT for technical documentation and maintenance procedures",
+      timeframe: "1-2 weeks",
+      cost: "$200-500",
+      impact:
+        "20% faster technical problem resolution and improved knowledge sharing"
+    },
+    {
+      initiative:
+        "Implement AI-powered scheduling assistant for maintenance planning",
       timeframe: "3-4 weeks",
       cost: "$2,000-5,000",
-      impact: "Eliminate paper waste and improve work order tracking accuracy"
+      impact:
+        "30% improvement in maintenance resource allocation and scheduling efficiency"
     },
     {
       initiative:
-        "Deploy basic production monitoring dashboard using existing data",
+        "Basic predictive analytics dashboard using existing machine data",
       timeframe: "4-6 weeks",
       cost: "$5,000-8,000",
-      impact: "Real-time visibility into daily production metrics"
-    },
-    {
-      initiative:
-        "Upgrade to cloud-based communication tools for production teams",
-      timeframe: "2-3 weeks",
-      cost: "$1,000-3,000",
-      impact: "Faster communication between shifts and departments"
+      impact:
+        "Early warning system for potential equipment issues and improved decision-making"
     }
   ],
   nextSteps: [
-    "Conduct comprehensive audit of current production systems and identify integration points",
-    "Secure manufacturing leadership buy-in and establish digital transformation steering committee",
-    "Evaluate MES vendors and begin pilot implementation on highest-volume production line"
+    "Conduct AI readiness assessment of current equipment and identify optimal sensor placement locations",
+    "Secure leadership buy-in for AI transformation initiative and establish cross-functional AI steering committee",
+    "Pilot IoT sensor deployment on highest-value production equipment and begin data collection for AI model training"
   ],
   metadata: {
     generatedAt: new Date().toISOString(),
@@ -145,112 +158,122 @@ export const manufacturingDemoData = {
       businessModel: "b2b",
       techStack: {
         dataManagement: 2,
-        financialSystems: 3,
-        salesProcess: 2,
-        hrOperations: 2,
-        itInfrastructure: 2
+        aiAdoption: 1,
+        processAutomation: 2,
+        teamReadiness: 2,
+        infrastructureReadiness: 2
       },
       painPoints: [
-        "Manual data entry taking too much time",
-        "Disconnected systems and data silos",
-        "Difficulty scaling operations"
+        "Repetitive manual tasks consuming too much time",
+        "Inefficient decision-making processes",
+        "Difficulty staying competitive with AI-adopting competitors"
       ],
       businessGoals: [
-        "Increase operational efficiency",
-        "Reduce operational costs",
-        "Improve customer experience"
+        "Automate repetitive tasks",
+        "Increase team productivity",
+        "Reduce operational costs through AI"
       ]
     },
     calculatedScore: 4.2,
+    assessmentType: "AI_TRANSFORMATION",
     demoData: true
   }
 };
 
 export const technologyDemoData = {
   executiveSummary:
-    "This 50-employee SaaS startup demonstrates solid digital maturity (6.8/10) with strong cloud-native infrastructure and modern development practices. The primary transformation opportunity lies in scaling operational processes, implementing advanced analytics for product optimization, and establishing enterprise-grade security and compliance frameworks.",
+    "This 50-employee SaaS startup demonstrates solid AI readiness (6.8/10) with strong technical foundation and basic AI tool adoption. The primary AI transformation opportunity lies in implementing customer intelligence AI, automated customer success workflows, and AI-powered product optimization to accelerate growth and improve user retention.",
   maturityScore: 6.8,
   industryComparison: {
     percentile: "65th",
-    benchmark: "Above average for technology companies",
+    benchmark: "Above average for technology companies in AI adoption",
     leadersScore: 9.2
   },
+  aiReadiness: {
+    currentState: "Moderate",
+    opportunities: [
+      "Customer intelligence AI to predict churn and expansion opportunities",
+      "AI-powered product analytics for automated A/B testing and feature optimization"
+    ],
+    competitiveGap:
+      "While currently above average, rapid AI adoption in the SaaS space means falling behind within 12-18 months without advanced AI implementation. Competitors using AI-driven customer success are achieving 25% higher retention rates."
+  },
   keyFindings: [
-    "Strong technical foundation with cloud-first architecture, but manual processes in customer success and sales operations are limiting growth velocity.",
-    "Implementing advanced product analytics and customer intelligence platforms offers the greatest potential for improving user retention and revenue per customer.",
-    "Without enhanced operational automation and enterprise security measures, the company risks challenges in scaling to enterprise customers and achieving compliance requirements."
+    "Strong technical foundation with cloud-native architecture, but underutilizing AI for customer intelligence and product optimization, missing potential 20% improvement in user retention.",
+    "Implementing advanced customer AI and automated product optimization offers the greatest potential for scaling operations while maintaining high-touch customer experience.",
+    "Without enhanced AI-driven customer success and product intelligence, the company risks losing competitive advantage to AI-first competitors in customer acquisition and retention efficiency."
   ],
   roadmap: {
     phase1: {
-      title: "Foundation (0-6 months)",
+      title: "AI Foundation (0-6 months)",
       budget: "$35,000-60,000",
       initiatives: [
         {
-          name: "Customer Success Platform Implementation",
+          name: "AI-Powered Customer Success Platform",
           description:
-            "Deploy a comprehensive customer success platform to automate onboarding, track product usage, and identify churn risks through predictive analytics.",
+            "Implement machine learning models to predict customer churn, identify expansion opportunities, and automate personalized customer engagement workflows.",
           impact:
-            "25% reduction in customer churn and 40% improvement in onboarding completion rates",
+            "25% reduction in customer churn and 40% improvement in expansion revenue identification",
           cost: "$20,000-35,000"
         },
         {
-          name: "Advanced Product Analytics Setup",
+          name: "Advanced Product Analytics with AI",
           description:
-            "Implement product analytics tools to track user behavior, feature adoption, and conversion funnels with real-time dashboards for product and engineering teams.",
+            "Deploy AI-driven product analytics to track user behavior patterns, predict feature adoption, and automatically optimize user onboarding flows.",
           impact:
-            "15% improvement in feature adoption and data-driven product decisions",
+            "30% improvement in feature adoption rates and data-driven product decisions",
           cost: "$15,000-25,000"
         }
       ]
     },
     phase2: {
-      title: "Optimization (6-12 months)",
+      title: "AI Integration (6-12 months)",
       budget: "$60,000-120,000",
       initiatives: [
         {
-          name: "Revenue Operations Automation",
+          name: "Intelligent Sales and Marketing Automation",
           description:
-            "Implement advanced CRM automation, lead scoring, and sales pipeline management with integration to product usage data for expansion revenue identification.",
+            "Implement AI-powered lead scoring, automated content personalization, and predictive sales pipeline management with integration to product usage intelligence.",
           impact:
-            "30% increase in sales team productivity and 20% improvement in expansion revenue",
+            "35% increase in qualified lead conversion and 25% improvement in sales cycle efficiency",
           cost: "$25,000-50,000"
         },
         {
-          name: "Enterprise Security and Compliance Framework",
+          name: "AI-Driven Customer Support Automation",
           description:
-            "Establish SOC 2 compliance, implement advanced security monitoring, and deploy enterprise-grade access controls and data protection measures.",
+            "Deploy conversational AI for customer support, automated ticket routing, and intelligent knowledge base recommendations with human handoff capabilities.",
           impact:
-            "Enable enterprise customer acquisition and reduce security risks by 60%",
+            "50% reduction in support response time and 30% improvement in first-contact resolution",
           cost: "$20,000-40,000"
         },
         {
-          name: "Customer Intelligence Platform",
+          name: "Automated A/B Testing and Feature Optimization",
           description:
-            "Deploy AI-powered customer intelligence to predict expansion opportunities, identify at-risk accounts, and personalize customer experiences at scale.",
+            "Implement AI systems to automatically design, execute, and analyze A/B tests for product features, UI/UX elements, and user flows.",
           impact:
-            "25% increase in customer lifetime value and improved retention rates",
+            "40% faster feature optimization cycles and 20% improvement in user engagement metrics",
           cost: "$15,000-30,000"
         }
       ]
     },
     phase3: {
-      title: "Innovation (12-18 months)",
+      title: "AI Innovation (12-18 months)",
       budget: "$80,000-160,000",
       initiatives: [
         {
-          name: "AI-Powered Product Optimization Engine",
+          name: "Advanced AI Product Intelligence Engine",
           description:
-            "Implement machine learning models for personalized user experiences, automated A/B testing, and intelligent feature recommendations based on user behavior patterns.",
+            "Build sophisticated ML models for personalized user experiences, intelligent feature recommendations, and predictive user lifecycle management.",
           impact:
-            "35% improvement in user engagement and 20% increase in feature utilization",
+            "45% improvement in user engagement and 25% increase in customer lifetime value",
           cost: "$45,000-90,000"
         },
         {
-          name: "Enterprise Integration Platform",
+          name: "AI-Powered Business Intelligence Platform",
           description:
-            "Build comprehensive API management and enterprise integration capabilities to support complex customer implementations and partner ecosystem growth.",
+            "Implement advanced analytics for market opportunity identification, competitive intelligence, and automated business performance optimization.",
           impact:
-            "Enable 50% faster enterprise customer implementations and new partnership revenue streams",
+            "Strategic competitive advantage through AI-driven market insights and 20% improvement in business decision speed",
           cost: "$35,000-70,000"
         }
       ]
@@ -264,45 +287,46 @@ export const technologyDemoData = {
   },
   riskAssessment: {
     low: [
-      "Technical integration complexity with existing cloud infrastructure",
-      "Learning curve for new analytics and automation tools"
+      "AI model training time and accuracy optimization",
+      "Customer data privacy compliance during AI implementation"
     ],
     medium: [
-      "Potential customer data privacy concerns during analytics implementation",
-      "Resource allocation between product development and operational improvements",
-      "Compliance audit timeline and certification delays"
+      "Technical talent retention during AI scaling phase",
+      "Customer acceptance of AI-driven interactions and recommendations",
+      "Integration complexity with existing product architecture"
     ],
     high: [
-      "Customer acquisition cost increase during transition to enterprise focus",
-      "Technical talent retention during rapid scaling phase"
+      "AI competitive disadvantage if rivals implement advanced customer AI first",
+      "Data quality requirements for accurate AI predictions and recommendations"
     ]
   },
   quickWins: [
     {
-      initiative: "Implement automated customer onboarding email sequences",
-      timeframe: "1-2 weeks",
-      cost: "$1,000-2,000",
-      impact: "20% improvement in trial-to-paid conversion rates"
-    },
-    {
-      initiative: "Deploy basic product usage tracking for key features",
-      timeframe: "3-4 weeks",
-      cost: "$3,000-5,000",
-      impact:
-        "Clear visibility into feature adoption and user engagement patterns"
-    },
-    {
-      initiative:
-        "Set up automated lead scoring based on product trial behavior",
+      initiative: "Implement AI-powered chatbot for basic customer queries",
       timeframe: "2-3 weeks",
-      cost: "$2,000-4,000",
-      impact: "25% improvement in sales team lead qualification efficiency"
+      cost: "$1,000-3,000",
+      impact:
+        "30% reduction in basic support tickets and 24/7 customer assistance"
+    },
+    {
+      initiative: "Deploy AI lead scoring based on product trial behavior",
+      timeframe: "3-4 weeks",
+      cost: "$2,000-5,000",
+      impact:
+        "25% improvement in sales team efficiency and lead qualification accuracy"
+    },
+    {
+      initiative: "Basic churn prediction model using existing customer data",
+      timeframe: "4-6 weeks",
+      cost: "$3,000-6,000",
+      impact:
+        "Early identification of at-risk customers and 15% improvement in retention efforts"
     }
   ],
   nextSteps: [
-    "Conduct comprehensive audit of current customer data and identify analytics implementation priorities",
-    "Secure product and engineering leadership alignment on customer success platform integration",
-    "Evaluate customer success and product analytics vendors with focus on API integration capabilities"
+    "Audit existing customer data quality and identify AI training data requirements",
+    "Establish AI ethics and customer privacy guidelines for AI implementation",
+    "Create AI product roadmap and secure engineering resources for customer intelligence platform development"
   ],
   metadata: {
     generatedAt: new Date().toISOString(),
@@ -313,112 +337,123 @@ export const technologyDemoData = {
       businessModel: "saas",
       techStack: {
         dataManagement: 3,
-        financialSystems: 3,
-        salesProcess: 3,
-        hrOperations: 3,
-        itInfrastructure: 4
+        aiAdoption: 3,
+        processAutomation: 3,
+        teamReadiness: 3,
+        infrastructureReadiness: 4
       },
       painPoints: [
-        "Poor visibility into business metrics",
-        "Difficulty scaling operations",
-        "Slow customer response times"
+        "Inefficient decision-making processes",
+        "Customer service response delays",
+        "Difficulty staying competitive with AI-adopting competitors"
       ],
       businessGoals: [
-        "Increase operational efficiency",
-        "Enable data-driven decisions",
-        "Improve customer experience"
+        "Extract insights from data",
+        "Improve customer experience with AI",
+        "Stay competitive with AI innovation"
       ]
     },
     calculatedScore: 6.8,
+    assessmentType: "AI_TRANSFORMATION",
     demoData: true
   }
 };
 
 export const professionalServicesDemoData = {
   executiveSummary:
-    "This 100-employee consulting firm demonstrates moderate digital maturity (5.1/10) with strong client relationship management but significant gaps in project delivery automation and knowledge management. The primary transformation opportunity lies in implementing project management platforms, automating time tracking and billing processes, and establishing centralized knowledge repositories to improve consultant productivity and client delivery quality.",
+    "This 100-employee consulting firm demonstrates moderate AI readiness (5.1/10) with strong client relationships but significant opportunities in document automation and knowledge management AI. The primary AI transformation opportunity lies in implementing AI-powered research assistants, automated proposal generation, and intelligent knowledge capture systems to improve consultant productivity and client delivery quality.",
   maturityScore: 5.1,
   industryComparison: {
     percentile: "45th",
-    benchmark: "Average performance for professional services companies",
+    benchmark:
+      "Average performance for professional services companies in AI adoption",
     leadersScore: 8.7
   },
+  aiReadiness: {
+    currentState: "Basic",
+    opportunities: [
+      "AI-powered document automation to reduce proposal development time by 50%",
+      "Intelligent knowledge management system to capture and share expertise across the firm"
+    ],
+    competitiveGap:
+      "Professional services firms implementing AI-powered research and proposal automation are winning 30% more contracts by delivering faster, more comprehensive proposals. Without AI adoption, the firm risks losing competitive advantage to more efficient AI-enabled competitors."
+  },
   keyFindings: [
-    "Manual time tracking and project management processes create administrative burden, reducing billable hour efficiency and increasing project delivery risks.",
-    "Implementing integrated project management and resource allocation systems offers the greatest potential for improving utilization rates and client satisfaction.",
-    "Without digitization of knowledge management and proposal processes, the firm risks losing competitive advantage to more efficient competitors and faces challenges in scaling beyond current capacity."
+    "Manual research, proposal writing, and knowledge management processes create significant productivity bottlenecks, with consultants spending 40% of billable time on administrative tasks.",
+    "Implementing AI-powered research assistants and document automation offers the greatest potential for improving consultant utilization rates and client delivery speed.",
+    "Without AI transformation for knowledge management and proposal automation, the firm faces challenges in scaling expertise and competing with AI-enabled firms that can deliver insights 3x faster."
   ],
   roadmap: {
     phase1: {
-      title: "Foundation (0-6 months)",
+      title: "AI Foundation (0-6 months)",
       budget: "$40,000-70,000",
       initiatives: [
         {
-          name: "Integrated Project Management Platform",
+          name: "AI-Powered Research and Analysis Platform",
           description:
-            "Deploy enterprise project management system with time tracking, resource allocation, and client collaboration features. Integrate with existing CRM for seamless project lifecycle management.",
+            "Implement AI research assistants capable of analyzing documents, market research, and industry reports to generate insights and summaries for client projects.",
           impact:
-            "20% improvement in project delivery efficiency and 15% increase in billable hour capture",
+            "50% reduction in research time and improved analysis quality through AI-augmented insights",
           cost: "$25,000-45,000"
         },
         {
-          name: "Automated Time Tracking and Billing System",
+          name: "Intelligent Document Generation System",
           description:
-            "Implement automated time capture tools with mobile capabilities and direct integration to billing systems, eliminating manual timesheet processes.",
+            "Deploy AI-powered tools for automated proposal generation, contract analysis, and report writing using firm templates and best practices.",
           impact:
-            "30% reduction in administrative overhead and improved billing accuracy",
+            "40% faster proposal development and improved consistency across client deliverables",
           cost: "$15,000-25,000"
         }
       ]
     },
     phase2: {
-      title: "Optimization (6-12 months)",
+      title: "AI Integration (6-12 months)",
       budget: "$65,000-130,000",
       initiatives: [
         {
-          name: "Knowledge Management and Document Automation",
+          name: "Smart Knowledge Management and Capture System",
           description:
-            "Establish centralized knowledge repository with automated document generation, proposal templates, and best practice sharing across all practice areas.",
+            "Implement AI-powered knowledge base that automatically captures insights from projects, emails, and meetings, making expertise searchable and reusable across teams.",
           impact:
-            "40% faster proposal development and improved knowledge retention",
+            "60% improvement in knowledge retention and 35% faster access to relevant expertise",
           cost: "$25,000-50,000"
         },
         {
-          name: "Resource Planning and Utilization Analytics",
+          name: "AI-Enhanced Client Intelligence Platform",
           description:
-            "Deploy advanced resource planning tools with predictive analytics for consultant utilization, skill gap analysis, and capacity forecasting.",
+            "Deploy machine learning models to analyze client communications, project outcomes, and market trends to provide strategic recommendations and identify expansion opportunities.",
           impact:
-            "25% improvement in consultant utilization rates and better project staffing decisions",
+            "25% increase in client retention and improved strategic advisory capabilities",
           cost: "$20,000-40,000"
         },
         {
-          name: "Client Portal and Collaboration Platform",
+          name: "Automated Competitive Intelligence System",
           description:
-            "Implement secure client portals for project transparency, document sharing, and real-time collaboration on deliverables and milestones.",
+            "Use AI to monitor industry trends, competitor activities, and market opportunities, automatically generating briefings and strategic insights for client work.",
           impact:
-            "Enhanced client satisfaction and 20% reduction in client communication overhead",
+            "Enhanced competitive positioning and 30% improvement in strategic recommendation quality",
           cost: "$20,000-40,000"
         }
       ]
     },
     phase3: {
-      title: "Innovation (12-18 months)",
+      title: "AI Innovation (12-18 months)",
       budget: "$75,000-150,000",
       initiatives: [
         {
-          name: "AI-Powered Business Intelligence Platform",
+          name: "Advanced AI Strategy and Advisory Platform",
           description:
-            "Implement advanced analytics for client profitability analysis, market opportunity identification, and predictive modeling for business development.",
+            "Implement sophisticated AI models for scenario planning, strategic analysis, and predictive modeling to enhance consulting capabilities and deliver unique AI-powered insights to clients.",
           impact:
-            "15% improvement in client profitability and data-driven growth strategy development",
+            "Premium positioning in market and 20% increase in project values through AI-enhanced advisory services",
           cost: "$40,000-80,000"
         },
         {
-          name: "Intelligent Proposal and Contract Automation",
+          name: "AI-Powered Business Development Engine",
           description:
-            "Deploy AI-powered tools for proposal generation, contract analysis, and risk assessment to accelerate business development processes.",
+            "Deploy advanced analytics for opportunity identification, automated proposal customization, and client relationship optimization using AI-driven insights.",
           impact:
-            "50% faster proposal turnaround and improved win rates through better targeting",
+            "40% improvement in business development efficiency and higher win rates through AI-optimized proposals",
           cost: "$35,000-70,000"
         }
       ]
@@ -432,47 +467,46 @@ export const professionalServicesDemoData = {
   },
   riskAssessment: {
     low: [
-      "Client data security requirements during platform transitions",
-      "Training requirements for consultants on new project management tools"
+      "Client confidentiality concerns with AI-powered document processing",
+      "Learning curve for consultants adapting to AI research tools"
     ],
     medium: [
-      "Change management resistance from senior partners accustomed to traditional processes",
-      "Integration challenges between project management and existing financial systems",
-      "Client acceptance of new collaboration and communication processes"
+      "Quality control ensuring AI-generated content meets client standards",
+      "Partner resistance to AI-augmented consulting processes",
+      "Data security requirements for client information in AI systems"
     ],
     high: [
-      "Potential disruption to ongoing client projects during system implementations",
-      "Partner buy-in requirements for significant process changes affecting billable operations"
+      "AI competitive disadvantage as clients expect AI-enhanced insights and faster delivery",
+      "Potential client concern about AI replacing human expertise and judgment"
     ]
   },
   quickWins: [
     {
-      initiative: "Implement mobile time tracking app for all consultants",
+      initiative:
+        "Implement ChatGPT Enterprise for research and initial draft writing",
+      timeframe: "1-2 weeks",
+      cost: "$1,000-2,000",
+      impact:
+        "30% faster initial research and draft document creation for client projects"
+    },
+    {
+      initiative: "Deploy AI-powered transcription and meeting summary tools",
       timeframe: "2-3 weeks",
-      cost: "$3,000-5,000",
-      impact:
-        "Eliminate paper timesheets and improve time capture accuracy by 25%"
-    },
-    {
-      initiative:
-        "Deploy basic project dashboard for real-time project status visibility",
-      timeframe: "4-6 weeks",
-      cost: "$5,000-8,000",
-      impact: "Improved project oversight and faster issue identification"
-    },
-    {
-      initiative:
-        "Standardize proposal templates and create shared document library",
-      timeframe: "3-4 weeks",
       cost: "$2,000-4,000",
+      impact: "50% time savings in meeting notes and action item generation"
+    },
+    {
+      initiative: "Basic AI contract and document analysis for due diligence",
+      timeframe: "4-6 weeks",
+      cost: "$3,000-6,000",
       impact:
-        "20% reduction in proposal development time and improved consistency"
+        "40% faster document review processes and improved accuracy in contract analysis"
     }
   ],
   nextSteps: [
-    "Conduct comprehensive assessment of current project delivery processes and identify integration requirements",
-    "Secure partner committee approval for project management platform selection and implementation timeline",
-    "Evaluate project management and resource planning vendors with focus on professional services industry expertise"
+    "Establish AI governance policies for client data security and confidentiality compliance",
+    "Pilot AI research tools with select consultants and measure productivity improvements",
+    "Evaluate AI document generation platforms and create firm-specific templates and guidelines"
   ],
   metadata: {
     generatedAt: new Date().toISOString(),
@@ -483,25 +517,26 @@ export const professionalServicesDemoData = {
       businessModel: "b2b",
       techStack: {
         dataManagement: 2,
-        financialSystems: 3,
-        salesProcess: 3,
-        hrOperations: 2,
-        itInfrastructure: 2
+        aiAdoption: 2,
+        processAutomation: 2,
+        teamReadiness: 2,
+        infrastructureReadiness: 2
       },
       painPoints: [
-        "Manual data entry taking too much time",
-        "Poor visibility into business metrics",
-        "Difficulty scaling operations",
-        "High IT maintenance costs"
+        "Repetitive manual tasks consuming too much time",
+        "Inefficient decision-making processes",
+        "Content creation bottlenecks",
+        "Limited team knowledge about AI capabilities"
       ],
       businessGoals: [
-        "Increase operational efficiency",
-        "Enable data-driven decisions",
-        "Reduce operational costs",
-        "Improve customer experience"
+        "Automate repetitive tasks",
+        "Extract insights from data",
+        "Increase team productivity",
+        "Stay competitive with AI innovation"
       ]
     },
     calculatedScore: 5.1,
+    assessmentType: "AI_TRANSFORMATION",
     demoData: true
   }
 };

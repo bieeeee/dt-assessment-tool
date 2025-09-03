@@ -10,7 +10,8 @@
     ROISection,
     QuickWinsSection,
     RiskSection,
-    NextStepSection
+    NextStepSection,
+    AIReadinessSection
   } from "$lib/components/assessment";
   import { generateAssessment } from "$lib/utils/ai-assessment";
   import type { AssessmentResult } from "$lib/types/assessment";
@@ -37,11 +38,10 @@
   }
 
   onMount(async () => {
-    console.log("SLUGS", page.params);
-    const slugs = page.params.path?.split("/") || [];
+    const path = page.params.path?.split("/") || [];
 
-    if (slugs[0] === "demo") {
-      const demoType = slugs[1];
+    if (path[0] === "demo") {
+      const demoType = path[1];
       result = getDemoData(demoType);
       loading = false;
 
@@ -69,6 +69,14 @@
   });
 </script>
 
+<svelte:head>
+  <title>Your AI Transformation Assessment Results</title>
+  <meta
+    name="description"
+    content="Comprehensive AI readiness assessment with actionable recommendations and implementation roadmap"
+  />
+</svelte:head>
+
 <main>
   {#if loading}
     <LoadingState />
@@ -76,18 +84,15 @@
     <ErrorState {error} />
   {:else if result}
     <div class="results-container">
-      <!-- Header -->
       <div class="results-header">
-        <h1>Your Digital Transformation Assessment</h1>
+        <h1>Your AI Transformation Assessment</h1>
       </div>
 
-      <!-- Executive Summary -->
       <section class="summary-section">
         <h2>Executive Summary</h2>
         <p class="summary-text">{result.executiveSummary}</p>
       </section>
 
-      <!-- Maturity Score -->
       <section class="score-section">
         <ScoreSection
           maturityScore={result.maturityScore}
@@ -95,21 +100,27 @@
         />
       </section>
 
-      <!-- Key Findings -->
+      {#if result.aiReadiness}
+        <section class="ai-readiness-section">
+          <div class="section-header">
+            <h2>AI Readiness Analysis</h2>
+          </div>
+          <AIReadinessSection aiReadiness={result.aiReadiness} />
+        </section>
+      {/if}
+
       <section class="findings-section">
         <h2>Key Findings</h2>
         <KeyFindingsSection keyFindings={result.keyFindings} />
       </section>
 
-      <!-- Transformation Roadmap -->
       <section class="roadmap-section">
         <h2>Transformation Roadmap</h2>
         <RoadmapSection roadmap={result.roadmap} />
       </section>
 
-      <!-- ROI Projection -->
       <section class="roi-section">
-        <h2>ROI Projection</h2>
+        <h2>AI Investment ROI</h2>
         <ROISection roiProjection={result.roiProjection} />
       </section>
 

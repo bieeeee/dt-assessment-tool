@@ -16,7 +16,7 @@
       }
     };
 
-    const stepInterval = setInterval(highlightNextStep, 500);
+    const stepInterval = setInterval(highlightNextStep, 1500);
 
     highlightNextStep();
   });
@@ -24,14 +24,14 @@
 
 <div class="loading-state">
   <h2 id="loading-title">
-    Generating Your Assessment<span class="dots"></span>
+    Generating Your AI Assessment<span class="dots"></span>
   </h2>
-  <p>Analyzing your digital transformation readiness</p>
+  <p>Analyzing your AI transformation readiness</p>
   <div class="loading-steps">
-    <div class="step active">📊 Processing your data</div>
-    <div class="step">🔍 Analyzing industry benchmarks</div>
-    <div class="step">🚀 Generating recommendations</div>
-    <div class="step">📋 Finalizing report</div>
+    <div class="step active">🤖 Processing your AI readiness data</div>
+    <div class="step">📊 Analyzing industry AI benchmarks</div>
+    <div class="step">🚀 Generating AI recommendations</div>
+    <div class="step">📋 Finalizing AI roadmap</div>
   </div>
 </div>
 

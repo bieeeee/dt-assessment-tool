@@ -5,10 +5,10 @@ interface AssessmentData {
   businessModel: string;
   techStack: {
     dataManagement: number;
-    financialSystems: number;
-    salesProcess: number;
-    hrOperations: number;
-    itInfrastructure: number;
+    aiAdoption: number;
+    processAutomation: number;
+    teamReadiness: number;
+    infrastructureReadiness: number;
   };
   painPoints: string[];
   businessGoals: string[];
@@ -39,6 +39,11 @@ interface AssessmentResult {
   industryComparison: {
     percentile: number;
     benchmark: string;
+  };
+  aiReadiness: {
+    currentState: string;
+    opportunities: string[];
+    competitiveGap: string;
   };
   keyFindings: string[];
   nextSteps: string[];

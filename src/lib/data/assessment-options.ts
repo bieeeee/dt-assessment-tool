@@ -37,54 +37,83 @@ const businessModels: Option[] = [
 const techCategories: TechCategoriesOption[] = [
   {
     key: "dataManagement",
-    title: "Data Management",
+    title: "Data & Analytics Readiness",
     icon: "📊",
-    levels: ["Manual/Excel", "Basic Tools", "Advanced Analytics", "AI-Powered"]
+    levels: [
+      "Manual/Excel",
+      "Basic Analytics",
+      "Advanced Analytics",
+      "AI-Ready Data Pipeline"
+    ]
   },
   {
-    key: "financialSystems",
-    title: "Financial Systems",
-    icon: "💰",
-    levels: ["Spreadsheets", "QuickBooks", "ERP System", "Cloud ERP"]
+    key: "aiAdoption",
+    title: "Current AI Tool Usage",
+    icon: "🤖",
+    levels: [
+      "No AI Tools",
+      "Basic AI Tools (ChatGPT)",
+      "Business AI Apps",
+      "Custom AI Solutions"
+    ]
   },
   {
-    key: "salesProcess",
-    title: "Sales Process",
-    icon: "🛒",
-    levels: ["Phone/Email", "Basic CRM", "Sales Automation", "AI-Powered"]
+    key: "processAutomation",
+    title: "Process Automation",
+    icon: "⚡",
+    levels: [
+      "Manual Processes",
+      "Basic Automation",
+      "Workflow Automation",
+      "AI-Powered Automation"
+    ]
   },
   {
-    key: "hrOperations",
-    title: "HR & Operations",
+    key: "teamReadiness",
+    title: "Team AI Literacy",
     icon: "👥",
-    levels: ["Paper/Excel", "HRIS", "Automated Workflows", "AI Assistant"]
+    levels: [
+      "No AI Training",
+      "Awareness Level",
+      "Active Users",
+      "AI-First Mindset"
+    ]
   },
   {
-    key: "itInfrastructure",
-    title: "IT Infrastructure",
-    icon: "🔒",
-    levels: ["On-Premise", "Hybrid", "Cloud-First", "Cloud-Native"]
+    key: "infrastructureReadiness",
+    title: "AI Infrastructure",
+    icon: "🔧",
+    levels: [
+      "Legacy Systems",
+      "Cloud Basic",
+      "AI-Ready Cloud",
+      "AI-Native Architecture"
+    ]
   }
 ];
 
 const painPointOptions: string[] = [
-  "Manual data entry taking too much time",
-  "Poor visibility into business metrics",
-  "Disconnected systems and data silos",
-  "Slow customer response times",
-  "Difficulty scaling operations",
-  "High IT maintenance costs",
-  "Security and compliance concerns",
-  "Remote work collaboration issues"
+  "Repetitive manual tasks consuming too much time",
+  "Lack of insights from available data",
+  "Inefficient decision-making processes",
+  "Customer service response delays",
+  "Content creation bottlenecks",
+  "Difficulty staying competitive with AI-adopting competitors",
+  "Limited team knowledge about AI capabilities",
+  "Concerns about AI implementation costs and ROI"
 ];
 
 const goalOptions = [
-  { id: "efficiency", label: "Increase operational efficiency", icon: "📈" },
-  { id: "decisions", label: "Enable data-driven decisions", icon: "💡" },
-  { id: "costs", label: "Reduce operational costs", icon: "💰" },
-  { id: "security", label: "Enhance security/compliance", icon: "🔒" },
-  { id: "remote", label: "Support remote/hybrid work", icon: "🌐" },
-  { id: "customer", label: "Improve customer experience", icon: "📊" }
+  { id: "automation", label: "Automate repetitive tasks", icon: "⚡" },
+  { id: "insights", label: "Extract insights from data", icon: "📈" },
+  { id: "efficiency", label: "Increase team productivity", icon: "🚀" },
+  { id: "customer", label: "Improve customer experience with AI", icon: "🤖" },
+  {
+    id: "competitive",
+    label: "Stay competitive with AI innovation",
+    icon: "🏆"
+  },
+  { id: "costs", label: "Reduce operational costs through AI", icon: "💰" }
 ];
 
 export {

@@ -7,15 +7,15 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1 class="hero-title">
-          Assess Your Digital
+          Assess Your AI
           <span class="text-gradient">Transformation</span>
           Readiness
         </h1>
 
         <p class="hero-subtitle">
-          Get AI-powered insights into your company's digital maturity with
-          industry-specific recommendations, realistic budgets, and measurable
-          ROI projections.
+          Get AI-powered insights into your company's artificial intelligence
+          maturity with industry-specific AI recommendations, realistic
+          implementation budgets, and measurable productivity gains.
         </p>
 
         <div class="hero-stats">
@@ -29,7 +29,7 @@
           </div>
           <div class="stat-item">
             <div class="stat-number">Industry</div>
-            <div class="stat-label">Specific Analysis</div>
+            <div class="stat-label">AI Use Cases</div>
           </div>
         </div>
 
@@ -58,7 +58,7 @@
               <div class="dot"></div>
               <div class="dot"></div>
             </div>
-            <span class="preview-title">Digital Assessment</span>
+            <span class="preview-title">AI Readiness Assessment</span>
           </div>
           <div class="preview-content">
             <div class="progress-bar">
@@ -66,12 +66,12 @@
             </div>
             <div class="preview-text">
               <div class="preview-question">
-                What's your current technology stack?
+                How advanced is your AI adoption?
               </div>
               <div class="preview-options">
-                <div class="preview-option active">Advanced Analytics</div>
-                <div class="preview-option">Basic CRM</div>
-                <div class="preview-option">Manual Processes</div>
+                <div class="preview-option active">Using AI Tools Daily</div>
+                <div class="preview-option">Exploring AI Solutions</div>
+                <div class="preview-option">No AI Implementation</div>
               </div>
             </div>
           </div>

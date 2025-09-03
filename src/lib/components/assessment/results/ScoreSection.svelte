@@ -37,17 +37,17 @@
 
   <div class="score-details">
     <div class="score-header">
-      <h3>Digital Maturity Score</h3>
+      <h3>AI Readiness Score</h3>
       <span
         class="score-badge
         {getScoreColor(maturityScore)} 
         bg-white/50 backdrop-blur-sm"
       >
         {maturityScore >= 8
-          ? "Excellent"
+          ? "AI-Ready"
           : maturityScore >= 6
-            ? "Good"
-            : "Needs Improvement"}
+            ? "AI-Capable"
+            : "AI-Beginner"}
       </span>
     </div>
 
@@ -57,7 +57,7 @@
 
     <div class="percentile-container">
       <div class="percentile-header">
-        <span class="percentile-label">Industry Percentile</span>
+        <span class="percentile-label">Industry AI Adoption Percentile</span>
         <span class="percentile-value">{industryComparison.percentile}</span>
       </div>
       <div class="percentile-bar">

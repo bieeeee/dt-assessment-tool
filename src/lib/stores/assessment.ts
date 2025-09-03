@@ -8,10 +8,10 @@ const initialData = {
   businessModel: "",
   techStack: {
     dataManagement: 0,
-    financialSystems: 0,
-    salesProcess: 0,
-    hrOperations: 0,
-    itInfrastructure: 0
+    aiAdoption: 0,
+    processAutomation: 0,
+    teamReadiness: 0,
+    infrastructureReadiness: 0
   },
   painPoints: [],
   businessGoals: []
@@ -42,7 +42,7 @@ function createAssessmentData() {
           [key]: updatedValue
         };
       }),
-    calculateTechScore: (techStack: Record<string, number>) => {
+    calculateAIReadinessScore: (techStack: Record<string, number>) => {
       const scores = Object.values(techStack);
       const average =
         scores.reduce((sum, score) => sum + score, 0) / scores.length;

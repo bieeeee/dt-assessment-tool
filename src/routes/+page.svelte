@@ -13,10 +13,10 @@
 </script>
 
 <svelte:head>
-  <title>Digital Transformation Assessment Tool</title>
+  <title>AI Transformation Assessment Tool</title>
   <meta
     name="description"
-    content="Assess your company's digital readiness and get actionable transformation recommendations"
+    content="Assess your company's AI readiness and get actionable transformation recommendations"
   />
 </svelte:head>
 
