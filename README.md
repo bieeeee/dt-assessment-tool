@@ -1,38 +1,50 @@
-# Digital Transformation Assessment Tool
+# AI Transformation Assessment Tool
 
-A professional web application that evaluates an organization's digital maturity and provides AI-powered transformation recommendations with industry-specific insights and actionable roadmaps.
+A comprehensive web application that evaluates an organization's AI readiness and provides AI-powered transformation recommendations with industry-specific insights and actionable implementation roadmaps.
 
 ## Problem & Solution
 
-Organizations struggle to assess their digital readiness and create practical transformation strategies. This tool provides:
+Organizations struggle to assess their AI readiness and create practical AI transformation strategies in today's competitive landscape. This tool provides:
 
-- **Industry-specific digital maturity assessment** across 5 key technology areas
-- **AI-powered analysis** using Google Gemini 1.5 Flash for personalized recommendations
-- **3-phase transformation roadmap** with realistic budgets and timelines
-- **ROI projections** and risk assessments tailored to company size and industry
+- **Industry-specific AI readiness assessment** across 5 key technology areas
+- **AI-powered analysis** using Google Gemini 1.5 Flash for personalized AI transformation recommendations
+- **3-phase AI implementation roadmap** with realistic budgets and timelines
+- **ROI projections** and competitive risk assessments tailored to company size and industry
 
 ## Key Features
 
-### Assessment Process
+### AI Readiness Assessment Process
 
-- Multi-step guided questionnaire covering company profile, technology stack, pain points, and business goals
+- Multi-step guided questionnaire covering company profile, AI adoption level, technology readiness, and business goals
 - Real-time validation with professional UI components
-- Mobile-responsive design with smooth animations
 
-### AI-Powered Analysis
 
-- Integration with Google Gemini AI for comprehensive business analysis
-- Industry-specific recommendations for Manufacturing, Technology, Professional Services, Healthcare, Finance, and Retail
-- Dynamic budget calculations based on company size
-- Conservative ROI projections with realistic payback periods
+### AI-Powered Analysis Engine
 
-### Professional Results Dashboard
+- Integration with Google Gemini AI for comprehensive AI transformation analysis
+- Industry-specific AI recommendations
+- Dynamic budget calculations based on company size for AI implementations
+- Conservative ROI projections with realistic payback periods for AI investments
+- Competitive gap analysis highlighting AI adoption risks
 
-- Executive summary with key findings and competitive risks
-- Digital maturity scoring with industry percentile ranking
-- Detailed transformation roadmap across Foundation, Optimization, and Innovation phases
-- Risk assessment matrix with mitigation strategies
-- Quick wins identification for immediate impact
+### Professional AI Results Dashboard
+
+- **Executive Summary** with AI readiness findings and transformation opportunities
+- **AI Readiness Score** with industry percentile ranking for AI adoption
+- **AI Transformation Roadmap** across Foundation, Integration, and Innovation phases
+- **Industry-Specific AI Opportunities** with practical implementation guidance
+- **Competitive Risk Assessment** for delayed AI adoption
+- **Quick Wins** identification for immediate AI impact
+
+
+## Technology Stack
+
+- **Frontend**: SvelteKit with TypeScript
+- **Styling**: Tailwind CSS with custom components
+- **AI Engine**: Google Gemini 1.5 Flash API
+- **State Management**: Svelte stores
+- **Build Tool**: Vite
+- **Deployment**: Vercel
 
 ## Development
 
@@ -49,7 +61,7 @@ npm install
 
 # Create environment file and add your Gemini API key
 touch .env
-# Add VITE_GEMINI_API_KEY=your_key_here to the .env file
+echo "GEMINI_API_KEY=your_gemini_api_key_here" >> .env
 
 # Start development server
 npm run dev
@@ -64,3 +76,14 @@ npm run build
 # Preview production build
 npm run preview
 ```
+
+### Environment Variables
+
+```bash
+# Required
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+## License
+
+MIT License
